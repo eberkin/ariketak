@@ -1,5 +1,5 @@
 
-public class agenda{
+public class Agenda{
 
 public void KontaktuakGehitu() {
     
