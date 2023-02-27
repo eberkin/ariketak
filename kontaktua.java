@@ -1,5 +1,6 @@
-public class kontaktua {
+public class Kontaktua {
     public String izena;
     public int telefonoa;
     
+
 }
