@@ -6,6 +6,7 @@ public void KontaktuakGehitu() {
 }
 public boolean KontaktuaExistitzenDu(Kontaktua k) {
     
+    
 }
 public void KontaktuakZerrendatu() {
     
