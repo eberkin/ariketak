@@ -1,6 +1,7 @@
 public class Kontaktua {
     public String izena;
     public int telefonoa;
+    public String <kontaktua> zerrenda [10] ;
     public void setIzena(String izena) {
         this.izena = izena;
     }
