@@ -72,13 +72,13 @@ public static void main(String[] args) {
                     System.exit(0);
                     break;
                 case 1:
-                    System.out.println("Sartu kontaktuaren izena");
+                    System.out.println("Sartu kontaktuaren izena:");
                     String izena = scanner.nextLine();
                     System.out.println("Sartu kontaktuaren telefonoa:");
                     String telefonoa = scanner.nextLine();
-			        Kontaktua k = new Kontaktua(izena, telefonoa);
-				    agenda.KontaktuakGehitu(k);
-				    break;
+                    Kontaktua k = new Kontaktua(izena, telefonoa);
+                    agenda.KontaktuakGehitu(k);
+                    break;
                 case 2:
                     System.out.println("Sartu bilatu nahi duzun kontaktuaren izena:");
                     String bilatuIzena = scanner.nextLine();
@@ -87,12 +87,12 @@ public static void main(String[] args) {
                 case 3:
                     System.out.println("Sartu ezabatu nahi duzun kontaktuaren izena:");
                     String ezabatuIzena = scanner.nextLine();
-                    for (Kontaktua k : agenda.kontaktuak) {
-                    if (k.getIzena().equals(ezabatuIzena)) {
-                    agenda.KontaktuaEzabatu(k);
-                    break;
-                    }
-                    }
+                    for (Kontaktua kontaktua : agenda.kontaktuak) {
+                        if (kontaktua.getIzena().equals(ezabatuIzena)) {
+                        agenda.KontaktuaEzabatu(kontaktua);
+                        break;
+                        }
+                        }
                     break;
                 case 4:
                     agenda.KontaktuakZerrendatu();
