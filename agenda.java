@@ -4,7 +4,7 @@ public class Agenda{
 public void KontaktuakGehitu() {
     
 }
-public boolean KontaktuaExistitzenDu(Kontaktua k) {
+public boolean KontaktuaExistitzenDu() {
     
     
 }
