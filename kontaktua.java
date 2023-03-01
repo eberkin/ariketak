@@ -4,7 +4,8 @@ public class Kontaktua {
     
 
     public Kontaktua(String StrIzena,int IntTelefonoa){
-        
+        izena = StrIzena;
+        telefonoa = IntTelefonoa;
     }
     
     public String getIzena() {
