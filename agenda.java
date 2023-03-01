@@ -5,15 +5,27 @@ import java.util.Arrays;
 public class Agenda{
     private ArrayList<Kontaktua> kontaktuak;
     private int tamaina;
-public void KontaktuakGehitu() {
-    
+public void KontaktuakGehitu(Kontaktua k) {
+    if (kontaktuak.size() < tamaina && !kontaktuak.contains(k)) {
+        kontaktuak.add(k);
+        System.out.println("Kontaktua gehitu da: " + k.getIzena() + ", " + k.getTelefonoa());
+    } else {
+        System.out.println("Ezin da kontaktua gehitu.");
+    }
 }
 public boolean KontaktuaExistitzenDu(Kontaktua k) {
    return kontaktuak.contains(k); 
     
 }
 public void KontaktuakZerrendatu() {
-    
+    if (kontaktuak.isEmpty()) {
+        System.out.println("Agendak hutsik dago.");
+    } else {
+        System.out.println("Agendako kontaktuak:");
+        for (Kontaktua k : kontaktuak) {
+            System.out.println(k.getIzena() + ", " + k.getTelefonoa());
+        }
+    }
 }
 public void KontataktuaBilatu(String izena) {
     for (Kontaktua k : kontaktuak) {
@@ -25,7 +37,11 @@ public void KontataktuaBilatu(String izena) {
     System.out.println("Ezin da kontaktua aurkitu.");
 }
 public void KontaktuaEzabatu(Kontaktua k) {
-    
+    if (kontaktuak.remove(k)) {
+        System.out.println("Kontaktua ezabatu da: " + k.getIzena() + ", " + k.getTelefonoa());
+    } else {
+        System.out.println("Ezin da kontaktua ezabatu.");
+    }
 }
 public void AgendaBeteta() {
     
@@ -55,7 +71,7 @@ public static void main(String[] args) {
                 break;
                 case 1:
                 System.out.println("Sartu kontaktuaren izena");
-                
+
             }
         }
 }
