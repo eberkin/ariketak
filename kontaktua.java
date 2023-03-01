@@ -1,23 +1,23 @@
 public class Kontaktua {
     public String izena;
-    public int telefonoa;
+    public String telefonoa;
     
 
-    public Kontaktua(String StrIzena,int IntTelefonoa){
+    public Kontaktua(String StrIzena,String telefonoa2){
         izena = StrIzena;
-        telefonoa = IntTelefonoa;
+        telefonoa = telefonoa2;
     }
     
     public String getIzena() {
         return izena;
     }
-    public int getTelefonoa() {
+    public String getTelefonoa() {
         return telefonoa;
     }
     public void setIzena(String izena) {
         this.izena = izena;
     }
-    public void setTelefonoa(int telefonoa) {
+    public void setTelefonoa(String telefonoa) {
         this.telefonoa = telefonoa;
     }
 

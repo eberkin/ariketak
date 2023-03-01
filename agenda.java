@@ -5,6 +5,8 @@ import java.util.Arrays;
 public class Agenda{
     private ArrayList<Kontaktua> kontaktuak;
     private int tamaina;
+    public Agenda(int i) {
+    }
 public void KontaktuakGehitu(Kontaktua k) {
     if (kontaktuak.size() < tamaina && !kontaktuak.contains(k)) {
         kontaktuak.add(k);
@@ -50,7 +52,7 @@ public int Hutsuneak() {
     return tamaina - kontaktuak.size();
 }
 public static void main(String[] args) {
-    
+    Agenda agenda = new Agenda(10);
     Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Aukeratu ekintza:");
@@ -65,14 +67,50 @@ public static void main(String[] args) {
 
             switch(aukera){
                 case 0:
-                System.out.println("Agur!");
-                scanner.close();
-                System.exit(0);
-                break;
+                    System.out.println("Agur!");
+                    scanner.close();
+                    System.exit(0);
+                    break;
                 case 1:
-                System.out.println("Sartu kontaktuaren izena");
-
+                    System.out.println("Sartu kontaktuaren izena");
+                    String izena = scanner.nextLine();
+                    System.out.println("Sartu kontaktuaren telefonoa:");
+                    String telefonoa = scanner.nextLine();
+			        Kontaktua k = new Kontaktua(izena, telefonoa);
+				    agenda.KontaktuakGehitu(k);
+				    break;
+                case 2:
+                    System.out.println("Sartu bilatu nahi duzun kontaktuaren izena:");
+                    String bilatuIzena = scanner.nextLine();
+                    agenda.KontataktuaBilatu(bilatuIzena);
+                    break;
+                case 3:
+                    System.out.println("Sartu ezabatu nahi duzun kontaktuaren izena:");
+                    String ezabatuIzena = scanner.nextLine();
+                    for (Kontaktua k : agenda.kontaktuak) {
+                    if (k.getIzena().equals(ezabatuIzena)) {
+                    agenda.KontaktuaEzabatu(k);
+                    break;
+                    }
+                    }
+                    break;
+                case 4:
+                    agenda.KontaktuakZerrendatu();
+                    break;
+                case 5:
+                    System.out.println("Agendak hutsuneak: " + agenda.Hutsuneak());
+                    break;
+                case 6:
+                    if (agenda.AgendaBeteta()) {
+                    System.out.println("Agenda beteta dago.");
+                    } else {
+                    System.out.println("Agenda ez dago beteta.");
+                    }
+                    break;
+                default:
+                    System.out.println("Aukera okerra, saiatu berriro.");
+                }
             }
         }
 }
-}
+           
