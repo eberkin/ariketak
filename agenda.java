@@ -1,20 +1,28 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Agenda{
-
+    private ArrayList<Kontaktua> kontaktuak;
+    private int tamaina;
 public void KontaktuakGehitu() {
     
 }
-public boolean KontaktuaExistitzenDu() {
-    
+public boolean KontaktuaExistitzenDu(Kontaktua k) {
+   return kontaktuak.contains(k); 
     
 }
 public void KontaktuakZerrendatu() {
     
 }
 public void KontataktuaBilatu(String izena) {
-    
+    for (Kontaktua k : kontaktuak) {
+        if (k.getIzena().equals(izena)) {
+            System.out.println("Kontaktua aurkitu da: " + k.getIzena() + ", " + k.getTelefonoa());
+            return;
+        }
+    }
+    System.out.println("Ezin da kontaktua aurkitu.");
 }
 public void KontaktuaEzabatu(Kontaktua k) {
     
@@ -47,7 +55,7 @@ public static void main(String[] args) {
                 break;
                 case 1:
                 System.out.println("Sartu kontaktuaren izena");
-                
+
             }
         }
 }
