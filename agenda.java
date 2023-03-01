@@ -43,11 +43,11 @@ public void KontaktuaEzabatu(Kontaktua k) {
         System.out.println("Ezin da kontaktua ezabatu.");
     }
 }
-public void AgendaBeteta() {
-    
+public boolean AgendaBeteta() {
+    return kontaktuak.size() == tamaina;
 }
-public void Hutsuneak() {
-    
+public int Hutsuneak() {
+    return tamaina - kontaktuak.size();
 }
 public static void main(String[] args) {
     
