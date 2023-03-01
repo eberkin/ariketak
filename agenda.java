@@ -55,7 +55,7 @@ public static void main(String[] args) {
                 break;
                 case 1:
                 System.out.println("Sartu kontaktuaren izena");
-
+                
             }
         }
 }
