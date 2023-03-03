@@ -4,23 +4,173 @@
 3 Google
 4 Apple
 ;E; 3
-;P;2.5
+;P;4
 ;G;2 Netflix, Disney+, HBO y Amazon Prime Video son plataformas de vídeo en streaming
 1 Si
 2 No
 ;E; 1
-;P;2.5
+;P;4
 ;G;3 Whatsapp pertenece a la empresa ...
 1 Google
 2 Sony
 3 Facebook
 4 Apple
 ;E; 3
-;P;2.5
+;P;4
 ;G;4 ¿Quién es el CEO de Facebook?
 1 Steve Jobs
 2 Mark Zuckerberg
 3 Bill Gates
 4 Javier Mas Díaz
 ;E; 2
-;P;2.5
+;P;4
+;G;5 UN MEGABYTE EQUIVALE A ...
+1 1024 kiloBytes
+2 1024 bits
+3 1000 kiloBytes
+4 1024 bytes
+;E; 1
+;P;4
+;G;6 Un proyector es un periférico de ...
+1 Salida
+2 Entrada
+3 Comunicación
+4 Almacenamiento
+;E; 1
+;P;4
+;G;7 La extensión .odt pertenece al software ...
+1 Microsoft Word
+2 Microsoft PowerPoint
+3 LibreOffice Writer
+4 LibreOffice Impress
+;E; 3
+;P;4
+;G;8 Scratch es un ...
+1 Editor de Vídeo
+2 Lenguaje de programación
+3 Navegador Web
+4 Procesador de texto 
+;E; 2
+;P;4
+;G;9 La tecnología inalámbrica que nos permite realizar pagos con nuestros dispositivos se llama ...
+1 Bluetooth
+2 NFC
+3 Wifi
+4 Infrarojos
+;E; 2
+;P;4
+;G;10 iOS es el sistema operativo de los ordenadores de la empresa Apple
+1 Verdadero
+2 Falso
+;E; 2
+;P;4
+;G;11 La red social más usada a nivel mundial es ...
+1 Facebook
+2 Youtube 
+3 Twitter 
+4 Instagram 
+;E; 1
+;P;4
+;G;12 ¿Cuál de los siguientes programas es un editor de vídeo?
+1 VLC
+2 Audacity 
+3 iMovie 
+4 Excel 
+;E; 3
+;P;4
+;G;13 ¿Cuál de los siguientes programas es un navegador web?
+1 Opera
+2 Google
+3 Mozilla Firefox
+4 Facebook
+;E; 3
+;P;4
+;G;14 ¿Qué es el hardware?
+1 Son los programas.
+2 Es un tipo de virus.
+3 Es la parte física de la computadora.
+4 Una comida típica de Novelda
+;E; 3
+;P;4
+;G;15 Cuáles son las teclas de atajo usadas en este mismo orden para: Cortar, Copiar y Pegar ?
+1 Ctrl + X, Ctrl + C y Ctrl + P
+2 Ctrl + X, Ctrl + C y Ctrl + V
+3 Ctrl + Z, Ctrl + C y Ctrl + V
+4 Ctrl + X, Ctrl + O y Ctrl + V
+;E; 2
+;P;4
+;G;16 ¿Cuáles de estos son tipos de virus?
+1 AVGs, Nortons y Aviras
+2 Firewalls, P2P y Blocks.
+3 Flotters, Spirros y Gryps.
+4 Spywares, Troyanos y Malwares.
+;E; 4
+;P;4
+;G;17 Un ratón es un periférico de ...
+1 Entrada
+2 Almacenamiento
+3 Salida
+4 Comunicación
+;E; 1
+;P;4
+;G;18 ¿Qué empresa ha desarrollado el videojuego Fornite?
+1 Infinity Ward
+2 Epic Games
+3 Epic Gays
+4 EA sports
+;E; 2
+;P;4
+;G;19 1 Byte son ...
+1 6 bits
+2 8 bits
+3 10 bits
+4 1024 bits
+;E; 2
+;P;4
+;G;20 En la clase de Informática los ordenadores están conectados por Wifi
+1 Verdadero
+2 Falso
+;E; 2
+;P;4
+;G;21 Los iPad tienen el sistema operativo ...
+1 Lliurex
+2 Windows
+3 Android
+4 iPadOS
+;E; 4
+;P;4
+;G;22 en que año se creo la primera computadora portatil
+1 1980
+2 1923
+3 1975
+4 1981
+;E; 4
+;P;4
+;G;23 traduce 101001 a decimal
+1 56
+2 78
+3 92
+4 41
+;E; 4
+;P;4
+;G;24 que significan las siglas w.w.w.?
+1 world wide web
+2 world word win
+3 wide web world
+4 word wide web
+;E; 1
+;P;4
+;G;25 ¿A qué proyecto asociarías el Linux?
+1 OMS
+2 GNU
+3 Ubuntu
+;E; 2
+;P;4
+
+
+
+
+
+
+
+
