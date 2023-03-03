@@ -1,17 +1,18 @@
-
+import java.util.ArrayList;
 
 public class Galdera {
     private String galdera;
-    private String [] aukerak;
+    private ArrayList<Aukera> erantzunak;
     private int erantzunZuzena;
     private double puntuaketa;
     
-    public Galdera(String galdera, String[] aukerak, int erantzunZuzena, double puntuaketa) {
-        this.galdera = galdera;
-        this.aukerak = aukerak;
-        this.erantzunZuzena = erantzunZuzena;
-        this.puntuaketa = puntuaketa;
-    }
+    public Galdera(String testua, ArrayList<Aukera> txtEdukia, double puntuak,int erantzunZuzena)
+    {
+        galdera = testua;
+        this.puntuak = puntuak;
+        this.erantzunak = new ArrayList<>();
+        this.erantzunak = txtEdukia;
+        this.erantzunak.get(erantzunZuzena).setZuzena(true);
 
     public void galderaErakutsi() {
         System.out.println(galdera);
