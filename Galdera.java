@@ -1,4 +1,4 @@
-package jarduera1;
+
 
 public class Galdera {
     private String galdera;
