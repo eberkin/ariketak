@@ -1,30 +1,29 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class Test {
-    public static void GalderakIrakurri() {
-        ArrayList <String> Galderak = new ArrayList();
+    public static void FitxeroaIrakurri() {
+        ArrayList<String> fitxeroa = new ArrayList<>();
         try {
-            //DOKUMENTUA IRAKURRI
-            File dokumentua = new File(pathFitxategia);
-            FileReader fr = new FileReader(dokumentua);
-            BufferedReader br = new BufferedReader(fr);
-            String lerroa;
-      
-            while ((lerroa = br.readLine()) != null) {
-            
-                int barraIndex = pathFitxategia.lastIndexOf("\\");
-                int puntoIndex = pathFitxategia.lastIndexOf(".");
-                String izena = pathFitxategia.substring(barraIndex+1,puntoIndex);
-                pg.setEtiketa(lerroa,izena);
-                // Objetua listan sartu
-                datuakGorde.add(pg);
-            } 
-      
-        } catch (Exception e) {
-            System.out.println("Ezin izan da dokumentua topatu" + e);
+            FileReader archivo = new FileReader("test.txt");
+            BufferedReader lector = new BufferedReader(archivo);
+            String linea = lector.readLine();
+            while (linea != null) {
+                fitxeroa.add(linea);
+                linea = lector.readLine();
+            }
+            lector.close();
+            archivo.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-      
-        return datuakGorde;
+        GalderakIrakurri(fitxeroa);
+    }
+    public static void GalderakIrakurri(ArrayList<String> fitxeroa) {
+        
     }
     public static void HurrengoGaldera () {
         
@@ -33,6 +32,9 @@ public class Test {
         
     }
     public static void TestaEgin() {
+        
+    }
+    public static void main(String[] args) {
         
     }
 
