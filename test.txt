@@ -1,0 +1,26 @@
+;G;1 El sistema opertativo Android pertenece a la empresa ...
+1 Microsoft
+2 Samsung
+3 Google
+4 Apple
+;E; 3
+;P;2.5
+;G;2 Netflix, Disney+, HBO y Amazon Prime Video son plataformas de vídeo en streaming
+1 Si
+2 No
+;E; 1
+;P;2.5
+;G;3 Whatsapp pertenece a la empresa ...
+1 Google
+2 Sony
+3 Facebook
+4 Apple
+;E; 3
+;P;2.5
+;G;4 ¿Quién es el CEO de Facebook?
+1 Steve Jobs
+2 Mark Zuckerberg
+3 Bill Gates
+4 Javier Mas Díaz
+;E; 2
+;P;2.5
