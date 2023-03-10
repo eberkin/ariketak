@@ -54,7 +54,7 @@ public boolean AgendaBeteta() {
 public int Hutsuneak() {
     return tamaina - kontaktuak.size();
 }
-public static void TelefonoaSartu(telefonoa) {
+public static String TelefonoaSartu() {
     try {
         System.out.print("Ingrese un número de máximo 9 dígitos: ");
         telefonoa = scanner.nextInt();
