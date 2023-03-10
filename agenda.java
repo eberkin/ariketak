@@ -60,18 +60,29 @@ public static int TelefonoaSartu() {
     try {
         telefonoa = scanner.nextInt();
         
-        if(telefonoa < 0 || telefonoa > 999999999){
-            throw new Exception("El número debe estar entre 0 y 999999999");
+        if(telefonoa < 100000000 || telefonoa > 999999999){
+            
         }
         
-        System.out.println("El número ingresado es: " + numero);
+        System.out.println("Sartutako telefonoa: " + telefonoa);
       } catch (Exception e) {
-        System.out.println("Ha ocurrido un error: " + e.getMessage());
+        System.out.println("Telefonoa ez da egokia: " + e.getMessage());
       }
-      
       scanner.close();
+      return telefonoa;
+      
     }
-}
+    public static String IzenaSartu() {
+        String izena = "";
+        Scanner scanner = new Scanner(System.in);
+        try {
+            izena = scanner.nextLine();
+        } catch (Exception e) {
+        // TODO: handle exception
+        }
+        scanner.close();
+        return izena;
+    }
 public static void main(String[] args) {
     Agenda agenda = new Agenda(10);
     Scanner scanner = new Scanner(System.in);
@@ -97,7 +108,7 @@ public static void main(String[] args) {
                     break;
                 case 1:
                     System.out.println("Sartu kontaktuaren izena:");
-                    izena = scanner.nextLine();
+                    izena = IzenaSartu();
                     System.out.println("Sartu kontaktuaren telefonoa:");
                     telefonoa = TelefonoaSartu();
                     Kontaktua k = new Kontaktua(izena, telefonoa);
