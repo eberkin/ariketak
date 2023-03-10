@@ -6,7 +6,10 @@ public class Agenda{
     private ArrayList<Kontaktua> kontaktuak;
     private int tamaina;
     public Agenda(int i) {
+        tamaina = i;
+        kontaktuak = new ArrayList<Kontaktua>();
     }
+    
 public void KontaktuakGehitu(Kontaktua k) {
     if (kontaktuak.size() < tamaina && !kontaktuak.contains(k)) {
         kontaktuak.add(k);
@@ -54,6 +57,9 @@ public int Hutsuneak() {
 public static void main(String[] args) {
     Agenda agenda = new Agenda(10);
     Scanner scanner = new Scanner(System.in);
+    String izena;
+    String telefonoa;
+
         while (true) {
             System.out.println("Aukeratu ekintza:");
             System.out.println("1. Kontaktua gehitu");
@@ -73,9 +79,9 @@ public static void main(String[] args) {
                     break;
                 case 1:
                     System.out.println("Sartu kontaktuaren izena:");
-                    String izena = scanner.nextLine();
+                    izena = scanner.nextLine();
                     System.out.println("Sartu kontaktuaren telefonoa:");
-                    String telefonoa = scanner.nextLine();
+                    telefonoa = scanner.nextLine();
                     Kontaktua k = new Kontaktua(izena, telefonoa);
                     agenda.KontaktuakGehitu(k);
                     break;
