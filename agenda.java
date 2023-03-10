@@ -54,6 +54,23 @@ public boolean AgendaBeteta() {
 public int Hutsuneak() {
     return tamaina - kontaktuak.size();
 }
+public static void TelefonoaSartu(telefonoa) {
+    try {
+        System.out.print("Ingrese un número de máximo 9 dígitos: ");
+        telefonoa = scanner.nextInt();
+        
+        if(telefonoa < 0 || telefonoa > 999999999){
+            throw new Exception("El número debe estar entre 0 y 999999999");
+        }
+        
+        System.out.println("El número ingresado es: " + numero);
+      } catch (Exception e) {
+        System.out.println("Ha ocurrido un error: " + e.getMessage());
+      }
+      
+      scanner.close();
+    }
+}
 public static void main(String[] args) {
     Agenda agenda = new Agenda(10);
     Scanner scanner = new Scanner(System.in);
@@ -81,7 +98,7 @@ public static void main(String[] args) {
                     System.out.println("Sartu kontaktuaren izena:");
                     izena = scanner.nextLine();
                     System.out.println("Sartu kontaktuaren telefonoa:");
-                    telefonoa = scanner.nextLine();
+                    telefonoa = TelefonoaSartu();
                     Kontaktua k = new Kontaktua(izena, telefonoa);
                     agenda.KontaktuakGehitu(k);
                     break;
