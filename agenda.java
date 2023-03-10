@@ -54,9 +54,10 @@ public boolean AgendaBeteta() {
 public int Hutsuneak() {
     return tamaina - kontaktuak.size();
 }
-public static String TelefonoaSartu() {
+public static int TelefonoaSartu() {
+    Scanner scanner = new Scanner(System.in);
+    int telefonoa = 0;
     try {
-        System.out.print("Ingrese un número de máximo 9 dígitos: ");
         telefonoa = scanner.nextInt();
         
         if(telefonoa < 0 || telefonoa > 999999999){
@@ -75,7 +76,7 @@ public static void main(String[] args) {
     Agenda agenda = new Agenda(10);
     Scanner scanner = new Scanner(System.in);
     String izena;
-    String telefonoa;
+    int telefonoa;
 
         while (true) {
             System.out.println("Aukeratu ekintza:");

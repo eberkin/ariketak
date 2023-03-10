@@ -1,9 +1,9 @@
 public class Kontaktua {
     public String izena;
-    public String telefonoa;
+    public int telefonoa;
     
 
-    public Kontaktua(String StrIzena,String telefonoa2){
+    public Kontaktua(String StrIzena,int telefonoa2){
         izena = StrIzena;
         telefonoa = telefonoa2;
     }
@@ -11,13 +11,13 @@ public class Kontaktua {
     public String getIzena() {
         return izena;
     }
-    public String getTelefonoa() {
+    public int getTelefonoa() {
         return telefonoa;
     }
     public void setIzena(String izena) {
         this.izena = izena;
     }
-    public void setTelefonoa(String telefonoa) {
+    public void setTelefonoa(int telefonoa) {
         this.telefonoa = telefonoa;
     }
 
