@@ -57,21 +57,22 @@ public int Hutsuneak() {
 public static int TelefonoaSartu() {
     Scanner scanner = new Scanner(System.in);
     int telefonoa = 0;
-    try {
-        telefonoa = scanner.nextInt();
-        
-        if(telefonoa < 100000000 || telefonoa > 999999999){
+    while (telefonoa < 100000000 || telefonoa > 999999999) {
+        try {
+            telefonoa = scanner.nextInt();
             
-        }
-        
-        System.out.println("Sartutako telefonoa: " + telefonoa);
-      } catch (Exception e) {
-        System.out.println("Telefonoa ez da egokia: " + e.getMessage());
-      }
-      scanner.close();
-      return telefonoa;
-      
+            
+            System.out.println("Sartutako telefonoa: " + telefonoa);
+          } catch (Exception e) {
+            System.out.println("Telefonoa ez da egokia: " + e.getMessage());
+          }
+    
+    
     }
+    scanner.close();
+    return telefonoa;
+}
+    
     public static String IzenaSartu() {
         String izena = "";
         Scanner scanner = new Scanner(System.in);
