@@ -3,8 +3,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Agenda{
-    private ArrayList<Kontaktua> kontaktuak;
-    private int tamaina;
+    private static ArrayList<Kontaktua> kontaktuak;
+    private static int tamaina;
     public Agenda(int i) {
         tamaina = i;
         kontaktuak = new ArrayList<Kontaktua>();
@@ -54,41 +54,46 @@ public boolean AgendaBeteta() {
 public int Hutsuneak() {
     return tamaina - kontaktuak.size();
 }
-public static int TelefonoaSartu() {
+public static Kontaktua DatuakSartu() {
     Scanner scanner = new Scanner(System.in);
     int telefonoa = 0;
+    String izena = "";
+      
+       if (kontaktuak.size()!=tamaina) {
+        try {
+            System.out.println("Sartu kontaktuaren izena:");
+            izena = scanner.nextLine();
+        } catch (Exception e) {
+        // TODO: handle exception
+        }
     while (telefonoa < 100000000 || telefonoa > 999999999) {
         try {
+            System.out.println("Sartu kontaktuaren telefonoa:");
             telefonoa = scanner.nextInt();
-            
-            
-            System.out.println("Sartutako telefonoa: " + telefonoa);
+            scanner.nextLine();
           } catch (Exception e) {
             System.out.println("Telefonoa ez da egokia: " + e.getMessage());
           }
     
     
+    
     }
-    scanner.close();
-    return telefonoa;
+       } else {
+        System.out.println("Agenda beteta dago!");
+       } 
+       
+        
+    
+   
+   Kontaktua k = new Kontaktua(izena, telefonoa);
+   return k;
+   
 }
     
-    public static String IzenaSartu() {
-        String izena = "";
-        Scanner scanner = new Scanner(System.in);
-        try {
-            izena = scanner.nextLine();
-        } catch (Exception e) {
-        // TODO: handle exception
-        }
-        scanner.close();
-        return izena;
-    }
+
 public static void main(String[] args) {
     Agenda agenda = new Agenda(10);
     Scanner scanner = new Scanner(System.in);
-    String izena;
-    int telefonoa;
 
         while (true) {
             System.out.println("Aukeratu ekintza:");
@@ -108,20 +113,19 @@ public static void main(String[] args) {
                     System.exit(0);
                     break;
                 case 1:
-                    System.out.println("Sartu kontaktuaren izena:");
-                    izena = IzenaSartu();
-                    System.out.println("Sartu kontaktuaren telefonoa:");
-                    telefonoa = TelefonoaSartu();
-                    Kontaktua k = new Kontaktua(izena, telefonoa);
+                    Kontaktua k = DatuakSartu();
                     agenda.KontaktuakGehitu(k);
+                    scanner.nextLine();
                     break;
                 case 2:
                     System.out.println("Sartu bilatu nahi duzun kontaktuaren izena:");
+                    scanner.nextLine();
                     String bilatuIzena = scanner.nextLine();
                     agenda.KontataktuaBilatu(bilatuIzena);
                     break;
                 case 3:
                     System.out.println("Sartu ezabatu nahi duzun kontaktuaren izena:");
+                    scanner.nextLine();
                     String ezabatuIzena = scanner.nextLine();
                     for (Kontaktua kontaktua : agenda.kontaktuak) {
                         if (kontaktua.getIzena().equals(ezabatuIzena)) {
@@ -135,6 +139,7 @@ public static void main(String[] args) {
                     break;
                 case 5:
                     System.out.println("Agendak hutsuneak: " + agenda.Hutsuneak());
+                    scanner.nextLine();
                     break;
                 case 6:
                     if (agenda.AgendaBeteta()) {
