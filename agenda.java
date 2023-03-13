@@ -89,7 +89,17 @@ public static Kontaktua DatuakSartu() {
    return k;
    
 }
-    
+    public static int ZenbakiaOndoDago() {
+        Scanner scanner = new Scanner(System.in);
+        int aukera=0;
+        try {
+        
+            aukera = scanner.nextInt();
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+    return aukera;
+}
 
 public static void main(String[] args) {
     Agenda agenda = new Agenda(10);
@@ -104,7 +114,7 @@ public static void main(String[] args) {
             System.out.println("5. Hutsuneak erakutsi");
             System.out.println("6. Agenda beteta dagoen edo ez");
             System.out.println("0. Irten");
-            int aukera = scanner.nextInt();
+            int aukera = ZenbakiaOndoDago();
 
             switch(aukera){
                 case 0:
