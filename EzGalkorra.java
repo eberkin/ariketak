@@ -1,19 +1,22 @@
-class EzGalkorra extends Produktua {
-
-    public EzGalkorra(String izena, double salneurria) {
-        super(izena, salneurria, izena);
+public class EzGalkorra extends Produktua {
+    private String mota;
+    
+    public EzGalkorra(String izena, double salneurria, String mota) {
+        super(izena, salneurria);
+        this.mota = mota;
     }
-
-    @Override
-    public int produktuKopurua(int zenbat) {
-        return zenbat;
+    
+    public String getMota() {
+        return mota;
     }
-
-    @Override
-    public String toString() {
-        return "EzGalkorra{" +
-                "izena='" + izena + '\'' +
-                ", salneurria=" + salneurria +
-                '}';
+    
+    public void setMota(String mota) {
+        this.mota = mota;
+    }
+    
+    public double kalkulatuSalneurria(int kopurua) {
+        return getSalneurria() * kopurua;
     }
 }
+    
+   
