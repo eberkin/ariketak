@@ -22,7 +22,7 @@ public class Galkorra extends Produktua {
         } else if (falta == 2) {
             return getSalneurria() * kopurua / 2;
         } else if (falta == 1) {
-            return getSalneurria() * kopurua / 4;
+            return getSalneurria() * kopurua / 3;
         } else {
             return 0;
         }
