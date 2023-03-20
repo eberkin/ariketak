@@ -32,7 +32,12 @@ public boolean bermeanDago() {
     return salmentaData.plusYears(2).isAfter(orain);
 }
 public String toString() {
-    return matrikula + " " + modeloa + " " + marka + " " + salmentaData.toString();
+    return "Autoa{" +
+            "matrikula='" + matrikula + '\'' +
+            ", salmentaData=" + salmentaData +
+            ", marka='" + marka + '\'' +
+            ", modeloa='" + modeloa + '\'' +
+            '}';
 }
 public boolean equals(Object o) {
     if (o == null) {
@@ -43,5 +48,8 @@ public boolean equals(Object o) {
     }
     Autoa a = (Autoa) o;
     return matrikula.equals(a.matrikula);
+}
+public boolean salduGabeDago() {
+    return false;
 }
 }

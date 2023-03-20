@@ -10,15 +10,15 @@ public class Galdera {
     public Galdera(String testua, ArrayList<Aukera> txtEdukia, double puntuak,int erantzunZuzena)
     {
         galdera = testua;
-        this.puntuak = puntuak;
+        this.puntuaketa = puntuak;
         this.erantzunak = new ArrayList<>();
         this.erantzunak = txtEdukia;
         this.erantzunak.get(erantzunZuzena).setZuzena(true);
 
     public void galderaErakutsi() {
         System.out.println(galdera);
-        for (int i = 0; i < aukerak.length; i++) {
-            System.out.println((i + 1) + ": " + aukerak[i]);
+        for (int i = 0; i < erantzunak.size(); i++) {
+            System.out.println((i + 1) + ": " + erantzunak.size());
         }
     }
 
@@ -30,8 +30,8 @@ public class Galdera {
         return galdera;
     }
 
-    public String[] getAukerak() {
-        return aukerak;
+    public <Aukera> getAukerak() {
+        return erantzunak;
     }
 
     public int getErantzunZuzena() {
@@ -41,6 +41,7 @@ public class Galdera {
     public double getPuntuaketa() {
         return puntuaketa;
     }
+}
 }
 
     
