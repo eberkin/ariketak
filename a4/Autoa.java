@@ -1,6 +1,7 @@
 package a4;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Autoa {
   public String matrikula;
@@ -9,7 +10,7 @@ public class Autoa {
   public String marka;
 
 
-public Autoa(String matrikula, LocalDate salmentaData, String modeloa, String marka){
+public Autoa(String matrikula, LocalDate salmentaData, String marka, String modeloa){
     this.matrikula = matrikula;
     this.marka = marka;
     this.modeloa = modeloa;
@@ -27,9 +28,12 @@ public LocalDate getSalmentaData(){
 public String getMarka() {
     return marka;
 }
-public boolean bermeanDago() {
+public int bermeanDago() {
+    int diferentzia;
     LocalDate orain = LocalDate.now();
-    return salmentaData.plusYears(2).isAfter(orain);
+    Period periodoa = Period.between(salmentaData, orain);
+     diferentzia = periodoa.getYears();
+    return diferentzia;
 }
 public String toString() {
     return "Autoa{" +
@@ -39,14 +43,12 @@ public String toString() {
             ", modeloa='" + modeloa + '\'' +
             '}';
 }
-public boolean equals(Object o) {
-    if (o == null) {
+public boolean equals(Autoa a) {
+    if (a == null) {
         return false;
     }
-    if (getClass() != o.getClass()) {
-        return false;
-    }
-    Autoa a = (Autoa) o;
+   
+   
     return matrikula.equals(a.matrikula);
 }
 public boolean salduGabeDago() {

@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Salmenta {
 
-    static List<Autoa> autoak = new ArrayList<>();
+    static List <Autoa> autoak = new ArrayList<>();
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -56,19 +56,23 @@ public class Salmenta {
                     System.out.println("Sartu autoaren matrikula:");
                     String mat = sc.next();
                     boolean badago = false;
+                    int diferentzia =0;
 
                     for (Autoa a : autoak) {
                         if (a.getMatrikula().equals(mat)) {
-                            if (a.salduGabeDago()) {
-                                System.out.println("Autoa bai saldua da eta bermean egongo da salmenta datatik bi urte igaro arte");
-                            } else {
-                                System.out.println("Autoa ez da saldua eta ezin daiteke bermean egon");
-                            }
                             badago = true;
+                            diferentzia = a.bermeanDago();
+                            if(diferentzia>=2){
+                                System.out.println("Autoa bermean dago");
+                            }
+                            else{
+                                System.out.println("Autoa ez dago bermean");
+                            }
+                            
                             break;
                         }
                     }
-
+                    
                     if (!badago) {
                         System.out.println("Matrikula hori duen autoa ez dago erregistratuta.");
                     }
